@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: #0A192F;
-}
-
 /*
     Nav area
 */
@@ -69,6 +65,69 @@ nav {
 
 .arrows-hidden {
     display: none;
+}
+
+/*
+    Home section
+*/
+
+.home-section {
+    text-align: center;
+    padding-top: 10%;
+    height: 99vh;
+    background: #C04848;
+    background: -webkit-linear-gradient(to right, #480048, #C04848);
+    background: linear-gradient(to right, #480048, #C04848);   
+}
+
+.home-image {
+    margin: 0 auto;
+    width: 50%;
+}
+
+.home-name {
+    font-family: "Poppins", sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.home-name h1 {
+    font-size: 80px;
+    font-family: "Playfair Display";
+    letter-spacing: 7px;
+    color:#e1caca;
+}
+
+.home-name h3 {
+    font-size: 50px;
+    margin-top: -20px;
+    font-weight: lighter;
+}
+
+.arrows-area {
+    animation: up-and-down 1.5s alternate-reverse infinite ease-in-out;
+    margin-top: 5%;
+}
+
+.arrow {
+    border: solid rgb(226, 226, 226);
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 8px;
+    margin: -15px;
+    width: 50px;
+    height: 50px;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+@media screen and (max-width: 992px) {
+    .nav-links {
+        width: 80%;
+    }
 }
 
 @media screen and (max-width: 768px) {
