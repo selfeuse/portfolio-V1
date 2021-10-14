@@ -52,7 +52,7 @@ nav {
 }
 
 .burger div {
-    background-color: #05afb6;
+    background-color: white;
     width: 25px;
     height: 3px;
     margin: 5px;
@@ -83,6 +83,10 @@ nav {
 .home-image {
     margin: 0 auto;
     width: 50%;
+}
+
+.home-image img {
+    width: 100%;
 }
 
 .home-name {
@@ -128,6 +132,10 @@ nav {
     .nav-links {
         width: 80%;
     }
+
+    .home-section {
+        padding-top: 20%;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -140,7 +148,7 @@ nav {
         right: 0px;
         height: 92vh;
         top: 8vh;
-        background-color: #172A45;
+        background-color: #852349;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -155,6 +163,28 @@ nav {
 
     .burger {
         display: block;
+    }
+    
+    .home-name h3 {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .home-section {
+        padding-top: 40%;
+    }
+
+    .home-name h1 {
+        font-size: 40px;
+    }
+
+    .home-name h3 {
+        font-size: 30px;
+    }
+
+    .arrows-area {
+        margin-top: 10%;
     }
 }
 
