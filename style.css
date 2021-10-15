@@ -83,6 +83,7 @@ nav {
 .home-image {
     margin: 0 auto;
     width: 50%;
+    max-width: 400px;
 }
 
 .home-image img {
@@ -126,6 +127,14 @@ nav {
 .down {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
+}
+
+/*
+    Description area
+*/
+
+.description-area {
+    height: 99vh;
 }
 
 @media screen and (max-width: 992px) {
