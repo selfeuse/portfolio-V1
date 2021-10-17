@@ -172,33 +172,52 @@ nav {
     background-color: white;
 }
 
+.description-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-content: space-around;
+    font-size: 20px;
+    font-family: 'Poppins';
+}
+
 .biography {
     font-weight: lighter;
     text-align: start;
-    white-space: pre;
+    grid-column: 2/3;
+    grid-row: 1;
 }
 
 .contact-card {
-    white-space: pre;
     text-align: start;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.table-content {
+    padding: 0 25px;
+}
+
+.contact-card table {
+    margin-bottom: 20px;
 }
 
 .social-links {
     display: inline-flex;
-    text-align: center;
+    justify-content: space-around;
 }
 
 .btn-linkedin {
     background: #0E76A8;
-    border-radius: 0;
     color: #fff;
     padding: 10px;
     text-decoration: none;
+    border-radius: 10px;
 }
 
 .btn-github {
     background: white;
-    border-radius: 0;
+    border-radius: 10px;
+    border: 1px solid black;
     color: black;
     padding: 10px;
     text-decoration: none;
