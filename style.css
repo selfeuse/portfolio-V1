@@ -95,8 +95,10 @@ nav {
 
 .section-titles h1 {
     font-size: 60px;
-    margin-bottom: 150px;
+    margin: auto;
+    margin-bottom: 100px;
     text-transform: uppercase;
+    width: max-content;
 }
 
 /*
@@ -107,7 +109,7 @@ nav {
     text-align: center;
     padding-top: 10%;
     height: 99vh;
-    background: linear-gradient(to right, #480048, #C04848);   
+    background: linear-gradient(to right, #480048, #C04848);
 }
 
 .home-content {
@@ -153,7 +155,7 @@ nav {
     font-size: 80px;
     font-family: "Playfair Display";
     letter-spacing: 7px;
-    color:#e1caca;
+    color: #e1caca;
 }
 
 .home-name h3 {
@@ -207,16 +209,25 @@ nav {
     text-align: start;
     grid-column: 2/3;
     grid-row: 1;
+    padding: 30px;
 }
 
 .contact-card {
     text-align: start;
     grid-column: 1;
     grid-row: 1;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    padding: 30px;
+    border-radius: 20px;
+    margin: auto;
 }
 
 .table-content {
     padding: 0 25px;
+}
+
+.table-ligne-elem {
+    font-weight: bolder;
 }
 
 .contact-card table {
@@ -243,6 +254,7 @@ nav {
     color: black;
     padding: 10px;
     text-decoration: none;
+    margin-right: 20px;
 }
 
 /*
@@ -253,7 +265,90 @@ nav {
     padding: 100px 200px;
     text-align: center;
     height: fit-content;
+    background: linear-gradient(to bottom, #C06148, #C04848);
+    margin-top: -10px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
     background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    left: 50%;
+}
+
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+.right::after {
+    left: -16px;
+}
+
+.content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
 }
 
 /*
@@ -282,7 +377,6 @@ nav {
     .nav-links {
         width: 80%;
     }
-
     .home-section {
         padding-top: 20%;
     }
@@ -292,7 +386,6 @@ nav {
     body {
         overflow-x: hidden;
     }
-
     .nav-links {
         position: absolute;
         right: 0px;
@@ -306,15 +399,12 @@ nav {
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
     }
-
     .nav-links li {
         opacity: 0;
     }
-
     .burger {
         display: block;
     }
-    
     .home-name h3 {
         margin-top: 0;
     }
@@ -375,37 +465,51 @@ textarea.contact-form-text {
     margin-top: -80px;
 }
 
-@media only screen and (max-width : 480px) {
+@media only screen and (max-width: 480px) {
     .section-titles span {
         font-size: 30px;
         margin-top: -10px;
     }
-
     .section-titles h1 {
         font-size: 30px;
         margin-top: -45px;
     }
-
     .home-section {
         padding-top: 40%;
     }
-
     .home-name h1 {
         font-size: 40px;
     }
-
     .home-name h3 {
         font-size: 30px;
     }
-
     .arrows-area {
         margin-top: 10%;
     }
-    
     .form-field input, .form-field select, .contact-form-text {
         margin: 10px auto;
         padding-left: 10px;
         font-size: 14px;
+    }
+    .timeline::after {
+        left: 31px;
+    }
+    .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    .container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+    .left::after, .right::after {
+        left: 15px;
+    }
+    .right {
+        left: 0%;
     }
 }
 
@@ -414,7 +518,6 @@ textarea.contact-form-text {
         opacity: 0;
         transform: translateX(50px);
     }
-
     to {
         opacity: 1;
         transform: translateX(0px);
