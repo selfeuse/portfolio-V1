@@ -107,15 +107,22 @@ nav {
     text-align: center;
     padding-top: 10%;
     height: 99vh;
-    background: #C04848;
-    background: -webkit-linear-gradient(to right, #480048, #C04848);
     background: linear-gradient(to right, #480048, #C04848);   
 }
 
+.home-content {
+    display: grid;
+    grid-template-columns: 2fr;
+    padding: 0 200px;
+    height: 50vh;
+}
+
 .home-image {
-    margin: 0 auto;
-    width: 50%;
+    margin: auto;
+    width: 100%;
     max-width: 400px;
+    grid-column: 3;
+    grid-row: 1;
 }
 
 .home-image img {
@@ -125,7 +132,21 @@ nav {
 .home-name {
     font-family: "Poppins", sans-serif;
     color: white;
-    text-align: center;
+    text-align: start;
+    grid-column: 1/2;
+    grid-row: 1;
+    height: 50%;
+    margin: auto;
+}
+
+.home-btn {
+    margin-top: 20px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 10px 20px;
 }
 
 .home-name h1 {
@@ -139,6 +160,7 @@ nav {
     font-size: 50px;
     margin-top: -20px;
     font-weight: lighter;
+    margin-bottom: 30px;
 }
 
 .arrows-area {
@@ -151,9 +173,9 @@ nav {
     border-width: 0 4px 4px 0;
     display: inline-block;
     padding: 8px;
-    margin: -15px;
-    width: 50px;
-    height: 50px;
+    margin: -20px;
+    width: 70px;
+    height: 70px;
 }
 
 .down {
