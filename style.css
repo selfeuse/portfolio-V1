@@ -377,8 +377,33 @@ nav {
     .nav-links {
         width: 80%;
     }
-    .home-section {
-        padding-top: 20%;
+    .home-image {
+        grid-column: 1/3;
+        grid-row: 1;
+    }
+    .home-name {
+        grid-column: 1/3;
+        grid-row: 2;
+        text-align: center;
+        height: auto;
+    }
+    .home-name h1 {
+        font-size: 60px;
+    }
+    .arrows-area {
+        margin-top: 25%;
+    }
+    .description-area, .experience-area {
+        padding: 100px 100px;
+    }
+    .biography {
+        grid-column: 1/3;
+        grid-row: 1;
+    }
+    
+    .contact-card {
+        grid-column: 1/3;
+        grid-row: 2;
     }
 }
 
