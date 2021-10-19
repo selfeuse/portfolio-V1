@@ -267,6 +267,26 @@ nav {
     height: fit-content;
     background: linear-gradient(to bottom, #C06148, #C04848);
     margin-top: -10px;
+    font-family: 'Poppins';
+}
+
+.experience-area ul {
+    list-style: none;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.experience-area li {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    background: #EADDCA;
+    border-radius: 10px;
+}
+
+.experience-area .content p {
+    margin-bottom: 20px;
 }
 
 .timeline {
@@ -348,7 +368,8 @@ nav {
     padding: 20px 30px;
     background-color: white;
     position: relative;
-    border-radius: 6px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }
 
 /*
