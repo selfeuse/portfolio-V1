@@ -335,15 +335,16 @@
             <h1>Send me a message</h1>
         </div>
         <div class="contact-content">
-            <form class="contact-form" action="">
+            <form class="contact-form" action="https://formspree.io/f/xeqvwkna"
+            method="POST">
 
-                <input type="text" class="contact-form-text" placeholder="Your name">
+                <input type="text" class="contact-form-text" placeholder="Your name" name="name" required>
 
-                <input type="email" class="contact-form-text" placeholder="Your email">
+                <input type="email" class="contact-form-text" placeholder="Your email" name="email" required> 
 
-                <input type="tel" class="contact-form-text" placeholder="Your phone">
+                <input type="tel" class="contact-form-text" placeholder="Your phone" name="phone">
 
-                <textarea class="contact-form-text" placeholder="Message"></textarea>
+                <textarea class="contact-form-text" placeholder="Message" name="message" required></textarea>
 
                 <input class="contact-form-btn" type="submit" value="Submit">
 
