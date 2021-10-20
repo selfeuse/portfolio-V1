@@ -1,12 +1,14 @@
 const navSlide = () => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
+    const arrows = document.querySelector('.arrows-area');
     const navLinks = document.querySelectorAll('.nav-links li');
     const navSection = document.querySelector('.nav-section');
     
     burger.addEventListener('click', () => {
         //Toggle Nav
         nav.classList.toggle('nav-active');
+        arrows.classList.toggle('display-none');
         navSection.style.overflow = 'initial';
         
         //Animate Links

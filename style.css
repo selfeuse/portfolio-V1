@@ -385,6 +385,7 @@ nav {
 
 .education-content {
     display: inline-flex;
+    flex-wrap: wrap;
 }
 
 .education-card {
@@ -410,6 +411,7 @@ nav {
 
 .card-container {
     display: inline-flex;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -529,6 +531,26 @@ textarea.contact-form-text {
     margin-top: -80px;
 }
 
+/*
+    Footer section
+*/
+
+.footer-section {
+    background: black;
+    color: white;
+    height: 75px;
+    font-family: 'Poppins';
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+@media only screen and (max-width : 1200px) {
+    .arrows-area {
+        margin-top: 15%;
+    }
+}
+
 @media screen and (max-width: 992px) {
     .nav-links {
         width: 80%;
@@ -536,6 +558,7 @@ textarea.contact-form-text {
     .home-image {
         grid-column: 1/3;
         grid-row: 1;
+        max-width: 300px;
     }
     .home-name {
         grid-column: 1/3;
@@ -549,7 +572,7 @@ textarea.contact-form-text {
     .arrows-area {
         margin-top: 25%;
     }
-    .description-area, .experience-area {
+    .description-area, .experience-area, .education-area, .projects-area, .contact-area {
         padding: 100px 100px;
     }
     .biography {
@@ -588,6 +611,9 @@ textarea.contact-form-text {
     .home-name h3 {
         margin-top: 0;
     }
+    .arrows-area {
+        margin-top: 33%;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -600,7 +626,14 @@ textarea.contact-form-text {
         margin-top: -45px;
     }
     .home-section {
-        padding-top: 40%;
+        padding-top: 30%;
+    }
+    .home-image {
+        max-width: 150px;
+        margin-bottom: 30px;
+    }
+    .home-content {
+        padding: 0;
     }
     .home-name h1 {
         font-size: 40px;
@@ -609,7 +642,25 @@ textarea.contact-form-text {
         font-size: 30px;
     }
     .arrows-area {
-        margin-top: 10%;
+        margin-top: 30%;
+    }
+    .down {
+        width: 50px;
+        height: 50px;
+    }
+    .description-area, .experience-area, .education-area, .projects-area, .contact-area {
+        padding: 100px 0;
+    }
+    .contact-card {
+        width: 100%;
+        overflow: hidden;
+    }
+    .contact-card table {
+        font-size: 15px;
+    }
+    .card-container {
+        width: 90%;
+        margin: auto;
     }
     .form-field input, .form-field select, .contact-form-text {
         margin: 10px auto;
@@ -635,6 +686,9 @@ textarea.contact-form-text {
     }
     .right {
         left: 0%;
+    }
+    .nav-section {
+        overflow-x: hidden;
     }
 }
 
@@ -665,4 +719,8 @@ textarea.contact-form-text {
 
 .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.display-none {
+    display:none;
 }
