@@ -1,527 +1,249 @@
-* {
+@font-face {
+    font-family: CenturyGothicBold;
+    src: url("assets/CenturyGothicBold.otf") format("opentype");
+}
+
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-/*
-    Nav area
-*/
-
-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 8vh;
-    font-family: "Poppins", sans-serif;
-    position: absolute;
-    top: 0;
-    width: 99vw;
-}
-
-.logo {
-    height: 75px;
-}
-
-.logo img {
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.nav-links {
-    display: flex;
-    width: 60%;
-    justify-content: space-around;
-}
-
-.nav-links li {
-    list-style: none;
-}
-
-.nav-links a {
-    color: rgb(226, 226, 226);
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-.nav-links a:hover {
-    border-bottom: 1px solid white;
-}
-
-.burger {
-    display: none;
-    cursor: pointer;
-}
-
-.burger div {
-    background-color: white;
-    width: 25px;
-    height: 3px;
-    margin: 5px;
-    transition: all 0.3s ease;
-}
-
-.nav-active {
-    transform: translateX(0) !important;
-}
-
-.arrows-hidden {
-    display: none;
-}
-
-/*
-    Global css
-*/
-
-.area {
-    opacity: 0;
-    transform: translate(0, 10vh);
-    transition: all 1s; 
-}
-
-.area.visible {
-    opacity: 1;
-    transform: translate(0, 0);
-}
-
-.section-titles {
-    text-align: center;
-}
-
-.section-titles span {
-    line-height: 30px;
-    font-size: 90px;
-    letter-spacing: 10px;
-    font-weight: 300;
-    opacity: 0.2;
-    text-transform: uppercase;
-    color: black;
-    position: absolute;
-    text-align: center;
+img {
     width: 100%;
-    left: 0;
 }
 
-.section-titles h1 {
-    font-size: 60px;
-    margin: auto;
-    margin-bottom: 100px;
-    text-transform: uppercase;
-    width: max-content;
-}
-
-/*
-    Home section
-*/
-
-.home-section {
-    text-align: center;
-    padding-top: 10%;
-    height: 99vh;
+#header {
     background: linear-gradient(to right, #480048, #C04848);
-}
-
-.home-content {
-    display: grid;
-    grid-template-columns: 2fr;
-    padding: 0 200px;
-    height: 50vh;
-}
-
-.home-image {
-    margin: auto;
-    width: 100%;
-    max-width: 400px;
-    grid-column: 3;
-    grid-row: 1;
-}
-
-.home-image img {
-    width: 100%;
-}
-
-.home-name {
-    font-family: "Poppins", sans-serif;
+    height: 700px;
     color: white;
-    text-align: start;
-    grid-column: 1/2;
-    grid-row: 1;
-    height: 50%;
-    margin: auto;
 }
 
-.home-btn {
-    margin-top: 20px;
+.navbar-brand {
+    width: 50px;
+    height: 29px;
+    left: 292px;
+    margin-top: -30px;
+}
+
+.nav-link {
+    padding: 12px 28px;
+}
+
+.presentation-part {
+    padding-top: 100px;
+}
+
+nav .navbar-nav li a {
+    color: white !important;
+}
+
+.get-btn {
     text-decoration: none;
     color: white;
     text-transform: uppercase;
     border: 2px solid white;
     border-radius: 20px;
     padding: 10px 20px;
+    background: none;
+    transition: .7s;
+    margin-right: 20px;
+    margin-top: 20px;
 }
 
-.home-name h1 {
-    font-size: 80px;
-    font-family: "Playfair Display";
-    letter-spacing: 7px;
+.get-btn-dark {
+    border: 2px solid black;
+    color: black;
+}
+
+.get-btn:hover {
+    background-color: #C04848;
+    color: white;
+    border: 2px solid white;
+}
+
+.name {
+    font-family: 'CenturyGothicBold';
     color: #e1caca;
 }
 
-.home-name h3 {
-    font-size: 50px;
-    margin-top: -20px;
-    font-weight: lighter;
-    margin-bottom: 30px;
-}
-
-.arrows-area {
-    animation: up-and-down 1.5s alternate-reverse infinite ease-in-out;
-    margin-top: 5%;
-}
-
-.arrow {
-    border: solid rgb(226, 226, 226);
-    border-width: 0 4px 4px 0;
-    display: inline-block;
-    padding: 8px;
-    margin: -20px;
-    width: 70px;
-    height: 70px;
-}
-
-.down {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-}
-
-/*
-    Description section
-*/
-
-.description-area {
-    padding: 100px 200px;
-    text-align: center;
-    height: fit-content;
-    background-color: white;
-}
-
-.description-content {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    justify-content: space-around;
-    font-size: 20px;
-    font-family: 'Poppins';
-}
-
-.biography {
-    font-weight: lighter;
-    text-align: start;
-    grid-column: 2/3;
-    grid-row: 1;
-    padding: 30px;
-}
-
-.contact-card {
-    text-align: start;
-    grid-column: 1;
-    grid-row: 1;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    padding: 30px;
-    border-radius: 20px;
-    margin: auto;
-}
-
-.table-content {
-    padding: 0 25px;
-}
-
-.table-ligne-elem {
-    font-weight: bolder;
-}
-
-.contact-card table {
-    margin-bottom: 20px;
-}
-
-.social-links {
-    display: inline-flex;
-    justify-content: space-around;
-}
-
-.btn-linkedin {
-    background: #0E76A8;
-    color: #fff;
-    padding: 10px;
-    text-decoration: none;
-    border-radius: 10px;
-}
-
-.btn-github {
-    background: white;
-    border-radius: 10px;
-    border: 1px solid black;
+.project-card {
     color: black;
-    padding: 10px;
-    text-decoration: none;
-    margin-right: 20px;
 }
 
-/*
-    Experience section
-*/
+.contact-card, .project-card {
+    border-radius: 20px;
+    overflow: hidden;
+}
 
-.experience-area {
-    padding: 100px 200px;
-    text-align: center;
-    height: fit-content;
+.card-text {
+    height: 150px;
+}
+
+.contact-card a {
+    color: #a2a8ae;
+    margin: 0 10px;
+    display: inline-block;
+    opacity: 0.7;
+}
+
+.nav-link:hover {
+    border-bottom: 1px solid white;
+}
+
+#experience, #projects {
     background: linear-gradient(to bottom, #C06148, #C04848);
-    margin-top: -10px;
-    font-family: 'Poppins';
-}
-
-.experience-area ul {
-    list-style: none;
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.experience-area li {
-    margin-right: 5px;
-    margin-bottom: 5px;
-    padding: 5px 10px;
-    background: #EADDCA;
-    border-radius: 10px;
-}
-
-.experience-area .content p {
-    margin-bottom: 20px;
+    color: white;
 }
 
 .timeline {
     position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.timeline::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    background-color: white;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
-}
-
-.container {
-    padding: 10px 40px;
-    position: relative;
-    background-color: inherit;
-    width: 50%;
-}
-
-.container::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -17px;
-    background-color: white;
-    border: 4px solid #FF9F55;
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
-}
-
-.left {
-    left: 0;
-}
-
-.right {
-    left: 50%;
-}
-
-.left::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    right: 30px;
-    border: medium solid white;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent white;
-}
-
-.right::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left: 30px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-}
-
-.right::after {
-    left: -16px;
-}
-
-.content {
-    padding: 20px 30px;
-    background-color: white;
-    position: relative;
-    border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
-}
-
-/*
-    Education section
-*/
-
-.education-area {
-    padding: 100px 200px;
-    text-align: center;
-    height: fit-content;
-    background-color: white;
-}
-
-.education-content {
-    display: inline-flex;
-    flex-wrap: wrap;
-}
-
-.education-card {
-    margin: 10px;
-    border-radius: 15px;
-    padding: 50px 30px;
-    box-shadow: 0 0 20px 8px #d0d0d0;
-    font-family: 'Poppins';
-    width: 30%;
-}
-
-/*
-    Projects section
-*/
-
-.projects-area {
-    padding: 100px 200px;
-    text-align: center;
-    height: fit-content;
-    background: linear-gradient(to bottom, #C06148, #C04848);
-    margin-top: -10px;
-    font-family: 'Poppins';
-}
-
-.card-container {
-    display: inline-flex;
-    flex-wrap: wrap;
-}
-
-.card {
-    margin: 10px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    width: 300px;
-  }
-
-  .card-header img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-
-  .card-header:hover {
-    opacity: .9;
-  }
-  
-  .overlay {
-    opacity: 0;
-    transition: .3s ease;
-    transform: translateY(-200%);
-  }
-  
-  .card-header:hover .overlay {
-    opacity: 1;
-  }
-  
-  .icon {
-    color: black;
-    font-size: 50px;
-  }
-
-  .card-body {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     padding: 10px;
-  }
-
-  .card-body p {
-    text-align: start;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
-  .tag-area { 
-      margin-bottom: 20px;
-      display: inline-flex;
-      flex-wrap: wrap;
-      height: 50px;
-  }
-  
-  .tag {
-    background: #cccccc;
-    border-radius: 50px;
-    font-size: 12px;
-    margin: 0;
-    color: #fff;
-    padding: 2px 10px;
-    text-transform: uppercase;
-    cursor: pointer;
-    margin-right: 5px;
-    margin-top: 5px;
-    height: 25px;
-  }
-
-  .tag-teal {
-    background-color: #47bcd4;
-  }
-
-  .tag-purple {
-    background-color: #5e76bf;
-  }
-
-  .tag-pink {
-    background-color: #cd5b9f;
-  }
-  
-  .card-body p {
-    font-size: 13px;
-    margin: 0 0 40px;
-  }
-
-/*
-    Contact section
-*/
-
-.contact-area {
-    padding: 100px 200px;
+.timeline-content {
+    background: white;
+    color: black;
 }
 
-.contact-section {
-    padding: 100px 20px;
-    text-align: center;
-    height: auto;
-    background-color: white;
+.timeline:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -1px;
+    border-right: 2px dashed #c4d2e2;
+    height: 100%;
+    display: block;
+}
+
+.timeline-row {
+    padding-left: 50%;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-row .timeline-time {
+    position: absolute;
+    right: 50%;
+    top: 31px;
+    text-align: right;
+    margin-right: 20px;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.timeline-row .timeline-time small {
+    display: block;
+    font-size: .8rem;
+    color: #8796af;
+}
+
+.timeline-row .timeline-content {
+    position: relative;
+    padding: 20px 30px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.timeline-row .timeline-content:after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    height: 3px;
+    width: 40px;
+}
+
+.timeline-row .timeline-content:before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: -50px;
+    width: 20px;
+    height: 20px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    z-index: 100;
+    background: #ffffff;
+    border: 2px dashed #c4d2e2;
+}
+
+.timeline-row .timeline-content h4 {
+    margin: 0 0 20px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 150%;
+}
+
+.timeline-row .timeline-content p {
+    margin-bottom: 30px;
+    line-height: 150%;
+}
+
+.timeline-row .timeline-content i {
+    font-size: 2rem;
+    color: #ffffff;
+    line-height: 100%;
+    padding: 10px;
+    border: 2px solid #ffffff;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.timeline-row .timeline-content .thumbs {
+    margin-bottom: 20px;
+}
+
+.timeline-row .timeline-content .thumbs img {
+    margin-bottom: 10px;
+}
+
+.timeline-row:nth-child(even) .timeline-content {
+    margin-left: 40px;
+    text-align: left;
+}
+
+.timeline-row:nth-child(even) .timeline-content:after {
+    left: -39px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.timeline-row:nth-child(even) .timeline-content:before {
+    left: -50px;
+    right: initial;
+}
+
+.timeline-row:nth-child(odd) {
+    padding-left: 0;
+    padding-right: 50%;
+}
+
+.timeline-row:nth-child(odd) .timeline-time {
+    right: auto;
+    left: 50%;
+    text-align: left;
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+.timeline-row:nth-child(odd) .timeline-content {
+    margin-right: 40px;
+    margin-left: 0;
+    text-align: right;
+}
+
+.timeline-row:nth-child(odd) .timeline-content:after {
+    right: -39px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
 }
 
 .contact-form {
@@ -568,206 +290,85 @@ textarea.contact-form-text {
     margin-top: -80px;
 }
 
-/*
-    Footer section
-*/
-
-.footer-section {
-    background: black;
-    color: white;
-    height: 75px;
-    font-family: 'Poppins';
-    text-align: center;
-    padding-top: 20px;
-}
-
-
-@media only screen and (max-width : 1200px) {
-    .arrows-area {
-        margin-top: 15%;
+@media (max-width: 767px) {
+    .timeline {
+        padding: 15px 10px;
     }
-
-    .education-area {
-        padding: 100px 0;
+    .timeline:after {
+        left: 28px;
     }
-}
-
-@media screen and (max-width: 992px) {
-    .nav-links {
-        width: 80%;
+    .timeline .timeline-row {
+        padding-left: 0;
+        margin-bottom: 16px;
     }
-    .home-image {
-        grid-column: 1/3;
-        grid-row: 1;
-        max-width: 300px;
+    .timeline .timeline-row .timeline-time {
+        position: relative;
+        right: auto;
+        top: 0;
+        text-align: left;
+        margin: 0 0 6px 56px;
     }
-    .home-name {
-        grid-column: 1/3;
-        grid-row: 2;
-        text-align: center;
-        height: auto;
+    .timeline .timeline-row .timeline-time strong {
+        display: inline-block;
+        margin-right: 10px;
     }
-    .home-name h1 {
-        font-size: 60px;
+    .timeline .timeline-row .timeline-icon {
+        top: 52px;
+        left: -2px;
+        margin-left: 0;
     }
-    .arrows-area {
-        margin-top: 25%;
+    .timeline .timeline-row .timeline-content {
+        padding: 15px;
+        margin-left: 56px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        position: relative;
     }
-    .description-area, .experience-area, .education-area, .projects-area, .contact-area {
-        padding: 100px 100px;
+    .timeline .timeline-row .timeline-content:after {
+        right: auto;
+        left: -39px;
+        top: 32px;
     }
-    .biography {
-        grid-column: 1/3;
-        grid-row: 1;
+    .timeline .timeline-row:nth-child(odd) {
+        padding-right: 0;
     }
-    .contact-card {
-        grid-column: 1/3;
-        grid-row: 2;
+    .timeline .timeline-row:nth-child(odd) .timeline-time {
+        position: relative;
+        right: auto;
+        left: auto;
+        top: 0;
+        text-align: left;
+        margin: 0 0 6px 56px;
     }
-    .education-card {
-        width: 100%;
+    .timeline .timeline-row:nth-child(odd) .timeline-content {
+        margin-right: 0;
+        margin-left: 55px;
     }
-}
-
-@media screen and (max-width: 768px) {
-    body {
-        overflow-x: hidden;
+    .timeline .timeline-row:nth-child(odd) .timeline-content:after {
+        right: auto;
+        left: -39px;
+        top: 32px;
+        border-left: inherit;
     }
-    .nav-links {
-        position: absolute;
-        right: 0px;
-        height: 92vh;
-        top: 8vh;
-        background-color: #852349;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 50%;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in;
+    .timeline.animated .timeline-row:nth-child(odd) .timeline-content {
+        left: 20px;
     }
-    .nav-links li {
-        opacity: 0;
-    }
-    .burger {
-        display: block;
-    }
-    .home-name h3 {
-        margin-top: 0;
-    }
-    .arrows-area {
-        margin-top: 33%;
+    .timeline.animated .timeline-row.active:nth-child(odd) .timeline-content {
+        left: 0;
     }
 }
 
-@media only screen and (max-width: 480px) {
-    .section-titles span {
-        font-size: 30px;
-        margin-top: -10px;
+@media only screen and (max-width: 768px) {
+    .margin-t {
+        margin-top: 50px;
     }
-    .section-titles h1 {
-        font-size: 30px;
-        margin-top: -45px;
-    }
-    .home-section {
-        padding-top: 30%;
-    }
-    .home-image {
-        max-width: 150px;
-        margin-bottom: 30px;
-    }
-    .home-content {
-        padding: 0;
-    }
-    .home-name h1 {
-        font-size: 40px;
-    }
-    .home-name h3 {
-        font-size: 30px;
-    }
-    .arrows-area {
-        margin-top: 30%;
-    }
-    .down {
-        width: 50px;
-        height: 50px;
-    }
-    .description-area, .experience-area, .education-area, .projects-area, .contact-area {
-        padding: 100px 0;
-    }
-    .contact-card {
-        width: 100%;
-        overflow: hidden;
-    }
-    .contact-card table {
-        font-size: 15px;
-    }
-    .card-container {
-        width: 90%;
+    img {
+        width: 60%;
         margin: auto;
     }
-    .education-card {
-        width: 100%;
+    #header {
+        height: 950px;
     }
-    .form-field input, .form-field select, .contact-form-text {
-        margin: 10px auto;
-        padding-left: 10px;
-        font-size: 14px;
+    .presentation-text {
+        text-align: center;
     }
-    .timeline::after {
-        left: 31px;
-    }
-    .container {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-    }
-    .container::before {
-        left: 60px;
-        border: medium solid white;
-        border-width: 10px 10px 10px 0;
-        border-color: transparent white transparent transparent;
-    }
-    .left::after, .right::after {
-        left: 15px;
-    }
-    .right {
-        left: 0%;
-    }
-    .nav-section {
-        overflow-x: hidden;
-    }
-}
-
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
-
-@keyframes up-and-down {
-    100% {
-        transform: translateY(-20px);
-    }
-}
-
-.toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.toggle .line2 {
-    opacity: 0;
-}
-
-.toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
-}
-
-.display-none {
-    display:none;
 }
