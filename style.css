@@ -371,4 +371,12 @@ textarea.contact-form-text {
     .presentation-text {
         text-align: center;
     }
+
+    .presentation-text .name {
+        font-size: 60px;
+    }
+
+    .title {
+        font-size: 40px;
+    }
 }
